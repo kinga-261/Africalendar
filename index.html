@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Africalendar — L'histoire africaine jour par jour</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="header-text">
+        <h1>Africalendar</h1>
+        <p class="subtitle">365 days · 54 countries  · common memory</p>
+      </div>
+      <div class="header-controls">
+        <input type="search" id="search-input" placeholder="Rechercher un événement, un pays…" aria-label="Rechercher">
+        <select id="filter-type" aria-label="Filtrer par type">
+          <option value="">All types</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="results-count" aria-live="polite"></div>
+
+    <!-- Calendar Grid -->
+    <section id="calendar-grid" aria-label="Événements historiques africains">
+      <!-- Cards injected by JS -->
+    </section>
+
+    <!-- Empty state -->
+    <div id="empty-state" hidden>
+      <p>No event found. Try another term.</p>
+    </div>
+  </main>
+
+  <!-- Popup Modal -->
+  <div id="event-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button id="close-modal" aria-label="Fermer">&#x2715;</button>
+      <article class="event-details" id="modal-title">
+        <!-- injected by JS -->
+      </article>
+    </div>
+  </div>
+
+  <footer>
+    <p>Africalendar &mdash; Mémoire du continent</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
